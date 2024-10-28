@@ -1,4 +1,4 @@
-Xử lý các trường hợp lỗi, như kiểm tra điều kiện khi mượn tài liệu
+Xử lý các trường hợp lỗi, như kiểm tra điều kiện khi mượn tài liệu \n
 ● Kiểm tra điều kiện khi mượn tài liệu: Ví dụ, không cho phép mượn tài
 liệu nếu không có sẵn.
 ● Thông báo lỗi: Cung cấp thông báo rõ ràng khi xảy ra lỗi, như nhập sai

@@ -17,15 +17,15 @@ import java.util.Properties;
 import java.util.function.Function;
 
 import javafx.util.Pair;
-import Entities.Address;
-import Entities.Book;
-import Entities.BookItem;
-import Entities.Member;
-import Entities.Person;
+import Entity.Address;
+import Entity.Book;
+import Entity.BookItem;
+import Entity.Member;
+import Entity.Person;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import Entities.BookLending;
+import Entity.BookLending;
 import weka.classifiers.functions.Logistic;
 import weka.core.Instances;
 

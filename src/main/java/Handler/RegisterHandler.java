@@ -1,6 +1,6 @@
 package Handler;
 
-import Controller.Account.RegisterController;
+import Controller.RegisterController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.effect.GaussianBlur;

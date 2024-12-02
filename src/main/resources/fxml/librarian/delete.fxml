@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Book.DeleteBookController" stylesheets="@/style.css" xmlns="http://javafx.com/javafx/23.0.1"
+            prefWidth="500" prefHeight="300" style="-fx-background-image: url('file:/D:/Library/LibraryManagementSystem/src/main/resources/image/librarian/actionBackground.jpg');
+            -fx-background-size: 100% 100%; -fx-background-position: center; -fx-background-radius: 10;">
+    <VBox alignment="CENTER" spacing="10" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20"
+          AnchorPane.rightAnchor="20" AnchorPane.bottomAnchor="20">
+        <Label text="DELETE BOOK" alignment="center" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+        <HBox alignment="CENTER" spacing="40">
+            <TextField fx:id="searchField" promptText="Barcode"
+                       style="-fx-background-radius: 5; -fx-padding: 8 8 8 30;"/>
+            <Button text="Search" styleClass="button-login-register" onAction="#handleSearchBook"/>
+        </HBox>
+
+        <StackPane>
+            <Label fx:id="notification1" style="-fx-text-fill: red; -fx-font-size: 14px;"/>
+            <Label fx:id="searchErrorLabel" style="-fx-text-fill: red; -fx-font-size: 14px;"/>
+        </StackPane>
+
+        <Label fx:id="isbnLabel" style="-fx-font-size: 12px; -fx-font-weight: bold;"/>
+        <Label fx:id="titleLabel" style="-fx-font-size: 12px; -fx-font-weight: bold;"/>
+        <Label fx:id="subjectLabel" style="-fx-font-size: 12px; -fx-font-weight: bold;"/>
+        <Label fx:id="publisherLabel" style="-fx-font-size: 12px; -fx-font-weight: bold;"/>
+        <Label fx:id="languageLabel" style="-fx-font-size: 12px; -fx-font-weight: bold;"/>
+        <Label fx:id="numberOfPagesLabel" style="-fx-font-size: 12px; -fx-font-weight: bold;"/>
+        <Label fx:id="authorNameLabel" style="-fx-font-size: 12px; -fx-font-weight: bold;"/>
+        <Label fx:id="barcodeLabel" style="-fx-font-size: 12px; -fx-font-weight: bold;"/>
+        <Label fx:id="priceLabel" style="-fx-font-size: 12px; -fx-font-weight: bold;"/>
+        <Label fx:id="bookFormatLabel" style="-fx-font-size: 12px; -fx-font-weight: bold;"/>
+        <Label fx:id="bookStatusLabel" style="-fx-font-size: 12px; -fx-font-weight: bold;"/>
+        <Label fx:id="publicationDateLabel" style="-fx-font-size: 12px; -fx-font-weight: bold;"/>
+
+        <StackPane>
+            <Label fx:id="notification2" style="-fx-text-fill: green; -fx-font-size: 14px;"/>
+            <Label fx:id="notification3" style="-fx-text-fill: red; -fx-font-size: 14px;"/>
+        </StackPane>
+
+        <HBox alignment="CENTER" spacing="20">
+            <Button text="Delete" styleClass="button-cancel" onAction="#handleDeleteBook"/>
+            <Button fx:id="cancelButton" text="Cancel" styleClass="button-cancel"/>
+        </HBox>
+    </VBox>
+
+</AnchorPane>

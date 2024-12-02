@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="resultForSearchPane" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.SearchController"
+            style="-fx-background-image: url('file:/D:/Library/LibraryManagementSystem/src/main/resources/image/librarian/actionBackground.jpg');
+             -fx-background-size: 100% 100%; -fx-background-position: center; -fx-background-radius: 10;">
+    <children>
+        <HBox prefHeight="30.0" prefWidth="350.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="10.0">
+            <children>
+                <TextField fx:id="searchTextField" prefHeight="30.0" prefWidth="300.0" promptText="Search Book">
+                    <HBox.margin>
+                        <Insets top="5.0"/>
+                    </HBox.margin>
+                </TextField>
+                <MenuButton fx:id="searchMenuButton" mnemonicParsing="false">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#searchByTitle" text="Search By Title"/>
+                        <MenuItem mnemonicParsing="false" onAction="#searchByISBN" text="Search By ISBN"/>
+                        <MenuItem mnemonicParsing="false" onAction="#searchByAuthor" text="Search By Author"/>
+                        <MenuItem mnemonicParsing="false" onAction="#searchBySubject" text="Search By Subject"/>
+                    </items>
+                    <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../../image/member/search_icon.png"/>
+                        </ImageView>
+                    </graphic>
+                </MenuButton>
+            </children>
+        </HBox>
+        <Label fx:id="searchResultLabel" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="60.0">
+            <font>
+                <Font name="Arial" size="15.0"/>
+            </font>
+        </Label>
+        <ScrollPane fx:id="bookListPane" maxHeight="400.0" maxWidth="540.0" prefWidth="542.0"
+                    AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="100.0">
+            <FlowPane fx:id="bookListFlowPane" alignment="CENTER" hgap="20" prefWrapLength="520.0" vgap="20"/>
+        </ScrollPane>
+        <Button layoutX="547.0" layoutY="14.0" mnemonicParsing="false" onAction="#exitStage" prefHeight="30.0"
+                text="Exit" AnchorPane.rightAnchor="7.666666666666629" AnchorPane.topAnchor="15.0">
+            <font>
+                <Font name="Arial" size="15.0"/>
+            </font>
+        </Button>
+        <Label fx:id="noBooksLabel" text="No books found matching your search." AnchorPane.leftAnchor="100.0"
+               AnchorPane.topAnchor="200.0">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

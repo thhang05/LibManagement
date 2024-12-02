@@ -1,0 +1,334 @@
+.button-login-register-exit {
+    -fx-background-color: transparent;
+    -fx-border-color: #4287F5;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-text-fill: #4287F5;
+    -fx-padding: 8 15;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.button-login-register-exit:hover {
+    -fx-background-color: rgba(66, 135, 245, 0.1);
+}
+
+.button-login-register {
+    -fx-background-color: transparent;
+    -fx-border-color: blue;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-text-fill: blue;
+    -fx-padding: 8 15;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.button-login-register:hover {
+    -fx-background-color: rgba(255, 213, 79, 0.1);
+}
+
+.button-cancel {
+    -fx-background-color: transparent;
+    -fx-border-color: #f44336;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-text-fill: #f44336;
+    -fx-padding: 8 15;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.button-cancel:hover {
+    -fx-background-color: rgba(244, 67, 54, 0.1);
+}
+
+.user_icon-field {
+    -fx-background-image: url('@../../image/librarian/user_icon.png');
+    -fx-background-size: 20px 20px;
+    -fx-background-position: 5px center;
+    -fx-background-repeat: no-repeat;
+}
+
+.password_icon-field {
+    -fx-background-image: url('@../../image/librarian/password_icon.png');
+    -fx-background-size: 20px 20px;
+    -fx-background-position: 5px center;
+    -fx-background-repeat: no-repeat;
+}
+
+.avatar-button {
+    -fx-background-image: url("@../../image/librarian/avatar_icon.png");
+    -fx-background-size: contain;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+}
+
+.context-menu {
+    -fx-background-color: transparent;
+        -fx-border-color: transparent;
+}
+
+.context-menu .menu-item {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-size: 12px;
+    -fx-padding: 1px 1px;
+}
+
+.context-menu .menu-item:hover {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+.add-book-button {
+    -fx-background-color: #64B5F6;
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-padding: 40px 20px 10px;
+    -fx-background-image: url('@../../image/librarian/add_icon.png');
+    -fx-background-size: 30px 30px;
+    -fx-background-position: center 10px;
+    -fx-background-repeat: no-repeat;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.add-book-button:hover {
+    -fx-background-color: #42A5F5;
+}
+
+.add-book-button:pressed {
+    -fx-background-color: #1E88E5;
+    -fx-padding: 42px 18px 8px;
+    -fx-background-insets: 2;
+}
+
+.edit-book-button {
+    -fx-background-color: #2196F3;
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-padding: 40px 20px 10px;
+    -fx-background-image: url('@../../image/librarian/edit_icon.png');
+    -fx-background-size: 30px 30px;
+    -fx-background-position: center 10px;
+    -fx-background-repeat: no-repeat;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.edit-book-button:hover {
+    -fx-background-color: #1976D2;
+}
+
+.edit-book-button:pressed {
+    -fx-background-color: #1976D2;
+    -fx-padding: 42px 18px 8px;
+    -fx-background-insets: 2;
+}
+
+.delete-book-button {
+    -fx-background-color: #FFD54F;
+    -fx-font-size: 18px;
+    -fx-text-fill: #333333;
+    -fx-padding: 40px 20px 10px;
+    -fx-background-image: url('@../../image/librarian/delete_icon.png');
+    -fx-background-size: 30px 30px;
+    -fx-background-position: center 10px;
+    -fx-background-repeat: no-repeat;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.delete-book-button:hover {
+    -fx-background-color: #FFCA28;
+}
+
+.delete-book-button:pressed {
+    -fx-background-color: #FFC107;
+    -fx-padding: 42px 18px 8px;
+    -fx-background-insets: 2;
+}
+
+.search-button {
+    -fx-background-color: #FFC107;
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-padding: 40px 20px 10px;
+    -fx-background-image: url('@../../image/librarian/search_icon.png');
+    -fx-background-size: 30px 30px;
+    -fx-background-position: center 10px;
+    -fx-background-repeat: no-repeat;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.search-button:hover {
+    -fx-background-color: #FFA000;
+}
+
+.search-button:pressed {
+    -fx-background-color: #FFA000;
+    -fx-padding: 42px 18px 8px;
+    -fx-background-insets: 2;
+}
+
+.view-books-button {
+    -fx-background-color: #9C27B0;
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-padding: 40px 20px 10px;
+    -fx-background-image: url('@../../image/librarian/view_icon.png');
+    -fx-background-size: 30px 30px;
+    -fx-background-position: center 10px;
+    -fx-background-repeat: no-repeat;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.view-books-button:hover {
+    -fx-background-color: #8E24AA;
+}
+
+.view-books-button:pressed {
+    -fx-background-color: #8E24AA;
+    -fx-padding: 42px 18px 8px;
+    -fx-background-insets: 2;
+}
+
+.manage-account-button {
+    -fx-background-color: #3F51B5;
+    -fx-font-size: 17px;
+    -fx-text-fill: white;
+    -fx-padding: 40px 20px 10px;
+    -fx-background-image: url('@../../image/librarian/manage_icon.png');
+    -fx-background-size: 30px 30px;
+    -fx-background-position: center 10px;
+    -fx-background-repeat: no-repeat;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.manage-account-button:hover {
+    -fx-background-color: #3949AB;
+}
+
+.manage-account-button:pressed {
+    -fx-background-color: #3949AB;
+    -fx-padding: 42px 18px 8px;
+    -fx-background-insets: 2;
+}
+
+.reports-button {
+    -fx-background-color: #009688;
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-padding: 40px 20px 10px;
+    -fx-background-image: url('@../../image/librarian/reports_icon.png');
+    -fx-background-size: 30px 30px;
+    -fx-background-position: center 10px;
+    -fx-background-repeat: no-repeat;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.reports-button:hover {
+    -fx-background-color: #00796B;
+}
+
+.reports-button:pressed {
+    -fx-background-color: #00796B;
+    -fx-padding: 42px 18px 8px;
+    -fx-background-insets: 2;
+}
+
+.fines-button {
+    -fx-background-color: #FF5722;
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-padding: 40px 20px 10px;
+    -fx-background-image: url('@../../image/librarian/fines_icon.png');
+    -fx-background-size: 30px 30px;
+    -fx-background-position: center 10px;
+    -fx-background-repeat: no-repeat;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.fines-button:hover {
+    -fx-background-color: #E64A19;
+}
+
+.fines-button:pressed {
+    -fx-background-color: #E64A19;
+    -fx-padding: 42px 18px 8px;
+    -fx-background-insets: 2;
+}
+
+.stat-box {
+    -fx-background-color: white;
+    -fx-padding: 10;
+    -fx-border-color: #ddd;
+    -fx-border-width: 1;
+    -fx-pref-width: 150;
+    -fx-pref-height: 80;
+}
+
+.stat-title {
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+.stat-number {
+    -fx-text-fill: black;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+.pagination .arrow-button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-background-radius: 5px;
+}
+
+.pagination .arrow-button:hover {
+    -fx-background-color: #2980b9;
+}
+
+.pagination .page-button {
+    -fx-background-color: #ecf0f1;
+    -fx-text-fill: #3498db;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #3498db;
+}
+
+.pagination .page-button:hover {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+}
+
+.pagination .page-button:selected {
+    -fx-background-color: #2980b9;
+    -fx-text-fill: white;
+}
+
+.menu .button {
+    -fx-background-color: #333;
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-cell {
+    -fx-cursor: hand;
+}

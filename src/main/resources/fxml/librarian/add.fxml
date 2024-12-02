@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Book.AddBookController" stylesheets="@/style.css"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            prefWidth="600" prefHeight="300" style="-fx-background-image: url('file:/D:/Library/LibraryManagementSystem/src/main/resources/image/librarian/actionBackground.jpg');
+            -fx-background-size: 100% 100%; -fx-background-position: center; -fx-background-radius: 10;">
+    <VBox alignment="CENTER" spacing="10" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20"
+          AnchorPane.rightAnchor="20" AnchorPane.bottomAnchor="20">
+        <Label text="ADD BOOK" alignment="center" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+        <HBox alignment="CENTER" spacing="60">
+            <TextField fx:id="isbnField" promptText="ISBN"
+                       style="-fx-background-radius: 5; -fx-padding: 8 8 8 10; -fx-pref-width: 200;"/>
+            <TextField fx:id="titleField" promptText="Title"
+                       style="-fx-background-radius: 5; -fx-padding: 8 8 8 10; -fx-pref-width: 200;"/>
+        </HBox>
+
+        <HBox alignment="CENTER" spacing="60">
+            <TextField fx:id="publisherField" promptText="Publisher"
+                       style="-fx-background-radius: 5; -fx-padding: 8 8 8 10; -fx-pref-width: 200;"/>
+            <TextField fx:id="subjectField" promptText="Subject"
+                       style="-fx-background-radius: 5; -fx-padding: 8 8 8 10; -fx-pref-width: 200;"/>
+        </HBox>
+
+        <HBox alignment="CENTER" spacing="60">
+            <TextField fx:id="languageField" promptText="Language"
+                       style="-fx-background-radius: 5; -fx-padding: 8 8 8 10; -fx-pref-width: 200;"/>
+            <TextField fx:id="numberOfPagesField" promptText="Number Of Pages"
+                       style="-fx-background-radius: 5; -fx-padding: 8 8 8 10; -fx-pref-width: 200;"/>
+        </HBox>
+
+        <HBox alignment="CENTER" spacing="60">
+            <TextField fx:id="authorNameField" promptText="Author Name"
+                       style="-fx-background-radius: 5; -fx-padding: 8 8 8 10; -fx-pref-width: 200;"/>
+            <TextField fx:id="barcodeField" promptText="Barcode"
+                       style="-fx-background-radius: 5; -fx-padding: 8 8 8 10; -fx-pref-width: 200;"/>
+        </HBox>
+
+        <HBox alignment="CENTER" spacing="60">
+            <TextField fx:id="priceField" promptText="Price"
+                       style="-fx-background-radius: 5; -fx-padding: 8 8 8 10; -fx-pref-width: 200;"/>
+            <TextField fx:id="bookFormatField" promptText="Format: Hardcover, Paperback,..."
+                       style="-fx-background-radius: 5; -fx-padding: 8 8 8 10; -fx-pref-width: 200;"/>
+        </HBox>
+
+        <HBox alignment="CENTER" spacing="60">
+            <TextField fx:id="bookStatusField" promptText="Status: Available, Loaned"
+                       style="-fx-background-radius: 5; -fx-padding: 8 8 8 10; -fx-pref-width: 200;"/>
+            <TextField fx:id="publicationDateField" promptText="Publication Date: YYYY-MM-DD"
+                       style="-fx-background-radius: 5; -fx-padding: 8 8 8 10; -fx-pref-width: 200;"/>
+        </HBox>
+
+        <StackPane>
+            <Label fx:id="notification1" style="-fx-text-fill: green; -fx-font-size: 14px;"/>
+            <Label fx:id="notification2" style="-fx-text-fill: red; -fx-font-size: 14px;"/>
+        </StackPane>
+
+        <HBox alignment="CENTER" spacing="20">
+            <Button text="Add" styleClass="button-login-register" onAction="#handleAddBook"/>
+            <Button fx:id="cancelButton" text="Cancel" styleClass="button-cancel"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

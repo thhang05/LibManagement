@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" stylesheets="@/style.css" fx:controller="Controller.Account.InfoController"
+            style="-fx-background-image: url('file:/D:/Library/LibraryManagementSystem/src/main/resources/image/librarian/actionBackground.jpg');
+            -fx-background-size: 100% 100%; -fx-background-position: center; -fx-background-radius: 10;">
+    <VBox alignment="CENTER" spacing="10" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20"
+          AnchorPane.rightAnchor="20" AnchorPane.bottomAnchor="20">
+        <Label text="UPDATE INFORMATION" alignment="CENTER" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+        <HBox alignment="CENTER" spacing="60">
+            <VBox>
+                <Label text="Full Name:" style="-fx-font-size: 12px; -fx-font-weight: bold;"/>
+                <HBox spacing="5">
+                    <TextField fx:id="nameField" promptText="Full Name"
+                               style="-fx-background-radius: 5; -fx-padding: 8 8 8 30;"/>
+                    <Label text="*" style="-fx-text-fill: red; -fx-font-size: 16px;"/>
+                </HBox>
+                <Label fx:id="nameErrorLabel" style="-fx-text-fill: red; -fx-font-size: 10px;"/>
+            </VBox>
+            <VBox>
+                <Label text="Email:" style="-fx-font-size: 12px; -fx-font-weight: bold;"/>
+                <HBox spacing="5">
+                    <TextField fx:id="emailField" promptText="Email"
+                               style="-fx-background-radius: 5; -fx-padding: 8 8 8 30;"/>
+                    <Label text="*" style="-fx-text-fill: red; -fx-font-size: 16px;"/>
+                </HBox>
+                <Label fx:id="emailErrorLabel" style="-fx-text-fill: red; -fx-font-size: 10px;"/>
+            </VBox>
+        </HBox>
+
+        <HBox alignment="CENTER" spacing="60">
+            <VBox>
+                <Label text="Phone Number:" style="-fx-font-size: 12px; -fx-font-weight: bold;"/>
+                <HBox spacing="5">
+                    <TextField fx:id="phoneField" promptText="Phone Number"
+                               style="-fx-background-radius: 5; -fx-padding: 8 8 8 30;"/>
+                    <Label text="*" style="-fx-text-fill: red; -fx-font-size: 16px;"/>
+                </HBox>
+                <Label fx:id="phoneErrorLabel" style="-fx-text-fill: red; -fx-font-size: 10px;"/>
+            </VBox>
+            <VBox>
+                <Label text="Street Address:" style="-fx-font-size: 12px; -fx-font-weight: bold;"/>
+                <HBox spacing="5">
+                    <TextField fx:id="streetField" promptText="Street Address"
+                               style="-fx-background-radius: 5; -fx-padding: 8 8 8 30;"/>
+                    <Label text="*" style="-fx-text-fill: red; -fx-font-size: 16px;"/>
+                </HBox>
+                <Label fx:id="streetErrorLabel" style="-fx-text-fill: red; -fx-font-size: 10px;"/>
+            </VBox>
+        </HBox>
+
+        <HBox alignment="CENTER" spacing="60">
+            <VBox>
+                <Label text="City:" style="-fx-font-size: 12px; -fx-font-weight: bold;"/>
+                <HBox spacing="5">
+                    <TextField fx:id="cityField" promptText="City"
+                               style="-fx-background-radius: 5; -fx-padding: 8 8 8 30;"/>
+                    <Label text="*" style="-fx-text-fill: red; -fx-font-size: 16px;"/>
+                </HBox>
+                <Label fx:id="cityErrorLabel" style="-fx-text-fill: red; -fx-font-size: 10px;"/>
+            </VBox>
+            <VBox>
+                <Label text="Country:" style="-fx-font-size: 12px; -fx-font-weight: bold;"/>
+                <HBox spacing="5">
+                    <TextField fx:id="countryField" promptText="Country"
+                               style="-fx-background-radius: 5; -fx-padding: 8 8 8 30;"/>
+                    <Label text="*" style="-fx-text-fill: red; -fx-font-size: 16px;"/>
+                </HBox>
+                <Label fx:id="countryErrorLabel" style="-fx-text-fill: red; -fx-font-size: 10px;"/>
+            </VBox>
+        </HBox>
+
+        <HBox alignment="CENTER" spacing="60">
+            <VBox>
+                <Label text="State:" style="-fx-font-size: 12px; -fx-font-weight: bold;"/>
+                <HBox spacing="5">
+                    <TextField fx:id="stateField" promptText="State" style="-fx-background-radius: 5; -fx-padding: 8 8 8 30;"/>
+                    <Label text=" " style="-fx-font-size: 16px;"/>
+                </HBox>
+            </VBox>
+            <VBox>
+                <Label text="Zipcode:" style="-fx-font-size: 12px; -fx-font-weight: bold;"/>
+                <HBox spacing="5">
+                    <TextField fx:id="zipcodeField" promptText="Zipcode" style="-fx-background-radius: 5; -fx-padding: 8 8 8 30;"/>
+                    <Label text=" " style="-fx-font-size: 16px;"/>
+                </HBox>
+            </VBox>
+        </HBox>
+
+        <Label text="(All fields marked with * must be completed)" style="-fx-text-fill: red; -fx-font-size: 10px;"/>
+
+        <StackPane>
+            <Label fx:id="notification1" style="-fx-text-fill: green; -fx-font-size: 14px;"/>
+            <Label fx:id="notification2" style="-fx-text-fill: red; -fx-font-size: 14px;"/>
+        </StackPane>
+
+        <HBox alignment="CENTER" spacing="20">
+            <Button text="Update" styleClass="button-login-register" onAction="#handleUpdate"/>
+            <Button fx:id="cancelButton" text="Cancel" styleClass="button-cancel"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

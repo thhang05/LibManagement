@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="homePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="600.0" prefWidth="800.0" style="-fx-background-image: url('D:/Library/LibraryManagementSystem/src/main/resources/image/member/memberBackground.png'); -fx-background-size: cover; -fx-background-position: center;"
+      xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="UI.HomeController">
+    <Label alignment="CENTER" layoutX="250.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;"
+           text="LIBRARY MANAGEMENT" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+           AnchorPane.topAnchor="20.0"/>
+    <AnchorPane fx:id="overlayPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: rgba(255, 255, 255, 0.7);">
+        <Button fx:id="menuButton" mnemonicParsing="false" onAction="#showMenu" prefHeight="30.0" prefWidth="30.0"
+                styleClass="button-except-account" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="20.0">
+            <graphic>
+                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../../image/member/hamburger_icon.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+        <HBox prefHeight="30.0" prefWidth="350.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="20.0">
+            <children>
+                <TextField fx:id="searchTextField" prefHeight="30.0" prefWidth="300.0" promptText="Search Book">
+                    <HBox.margin>
+                        <Insets top="5.0"/>
+                    </HBox.margin>
+                </TextField>
+                <MenuButton fx:id="searchMenuButton" mnemonicParsing="false">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#searchByTitle" text="Search By Title"/>
+                        <MenuItem mnemonicParsing="false" onAction="#searchByISBN" text="Search By ISBN"/>
+                        <MenuItem mnemonicParsing="false" onAction="#searchByAuthor" text="Search By Author"/>
+                        <MenuItem mnemonicParsing="false" onAction="#searchBySubject" text="Search By Subject"/>
+                    </items>
+                    <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../../image/member/search_icon.png"/>
+                        </ImageView>
+                    </graphic>
+                </MenuButton>
+            </children>
+        </HBox>
+        <Button fx:id="notificationButton" layoutX="552.0" layoutY="214.0" mnemonicParsing="false"
+                onAction="#showNotificationPopup" prefHeight="30.0" prefWidth="30.0" styleClass="button-except-account"
+                AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="20.0">
+            <graphic>
+                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../../image/member/notification_icon.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="accountButton" mnemonicParsing="false" onAction="#showAccountContextMenu" prefHeight="30.0"
+                prefWidth="30.0" styleClass="account-button" AnchorPane.leftAnchor="530.0" AnchorPane.topAnchor="20.0">
+            <graphic>
+                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../../image/member/user_icon.png"/>
+                </ImageView>
+            </graphic>
+            <contextMenu>
+                <ContextMenu fx:id="accountContextMenu">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#showAccountInfo" text="Profile"/>
+                        <MenuItem mnemonicParsing="false" onAction="#resetPassword" text="Reset"/>
+                        <MenuItem mnemonicParsing="false" onAction="#logOut" text="Log out"/>
+                    </items>
+                </ContextMenu>
+            </contextMenu>
+        </Button>
+        <Label fx:id="usernameLabel" AnchorPane.leftAnchor="600.0" AnchorPane.topAnchor="25.0">
+            <font>
+                <Font name="Calibri Light Italic" size="20.0"/>
+            </font>
+        </Label>
+        <Label layoutX="30.0" layoutY="79.0" prefHeight="30.0" text="POPULAR" AnchorPane.leftAnchor="30.0"
+               AnchorPane.topAnchor="70.0">
+            <graphic>
+                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../../image/member/hot_icon.png"/>
+                </ImageView>
+            </graphic>
+            <font>
+                <Font name="Comic Sans MS Bold Italic" size="12.0"/>
+            </font>
+        </Label>
+        <ScrollPane hbarPolicy="NEVER" prefHeight="180.0" vbarPolicy="NEVER" AnchorPane.leftAnchor="10.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
+            <content>
+                <HBox fx:id="popularBookHBox" prefHeight="170.0"/>
+            </content>
+        </ScrollPane>
+        <Label layoutX="37.0" layoutY="300.0" prefHeight="30.0" text="RECOMMEND" AnchorPane.leftAnchor="30.0"
+               AnchorPane.topAnchor="295.0">
+            <graphic>
+                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../../image/member/recommend_book_icon.png"/>
+                </ImageView>
+            </graphic>
+            <font>
+                <Font name="Comic Sans MS Bold Italic" size="12.0"/>
+            </font>
+        </Label>
+        <ScrollPane hbarPolicy="NEVER" prefHeight="180.0" vbarPolicy="NEVER" AnchorPane.leftAnchor="10.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="330.0">
+            <content>
+                <HBox fx:id="recommendBookHBox" prefHeight="170.0"/>
+            </content>
+        </ScrollPane>
+        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#scannerQR">
+                    <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../../image/member/qr_icon.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </HBox>
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        </padding>
+    </AnchorPane>
+</Pane>

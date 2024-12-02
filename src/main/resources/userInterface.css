@@ -1,0 +1,76 @@
+.button-except-account, .account-button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.button-except-account {
+    -fx-border-color: #666666; /* Màu viền xám đậm */
+    -fx-border-radius: 5px; /* Bo góc viền */
+    -fx-text-fill: #000000; /* Màu chữ */
+}
+
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;          /* Màu chữ */
+    -fx-border-radius: 5px;        /* Bo góc đường viền */
+    -fx-background-radius: 5px;    /* Bo góc nền */
+}
+
+.menu-button .label {
+    -fx-text-fill: black;
+}
+
+.menu-button .menu-item {
+    -fx-background-color:transparent;
+    -fx-text-fill: black;
+}
+
+.menu-button .menu-item:hover {
+    -fx-background-color: #add8e6;
+}
+
+.table-view {
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-color: #f9f9f9;
+    -fx-padding: 5px;
+    -fx-table-cell-border-color: #dddddd;
+    -fx-table-header-border-color: #b3b3b3;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #e6e6e6, #d4d4d4);
+    -fx-border-color: #b3b3b3;
+    -fx-border-width: 0 0 1px 0; /* Chỉ viền dưới */
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.table-cell, .table-view .table-cell {
+    -fx-border-color: #000000;
+    -fx-border-width: 1px;
+    -fx-padding: 5px;
+    -fx-text-fill: #333333;
+    -fx-font-size: 12px;
+    -fx-alignment: center;
+    -fx-wrap-text: true;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: black;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+}
+
+.table-view .table-cell:focused {
+    -fx-background-color: transparent;
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Account.ResetPasswordController" stylesheets="@/style.css" xmlns="http://javafx.com/javafx/23.0.1"
+            prefWidth="400" prefHeight="300" style="-fx-background-image: url('file:/D:/Library/LibraryManagementSystem/src/main/resources/image/librarian/actionBackground.jpg');
+            -fx-background-size: 100% 100%; -fx-background-position: center; -fx-background-radius: 10;">
+    <VBox alignment="CENTER" spacing="10" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20"
+          AnchorPane.rightAnchor="20" AnchorPane.bottomAnchor="20">
+        <Label text="PASSWORD" alignment="center" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+        <TextField fx:id="passwordField" promptText="Password" style="-fx-background-radius: 5; -fx-padding: 8 8 8 30;"/>
+        <TextField fx:id="newPasswordField" promptText="New Password" style="-fx-background-radius: 5; -fx-padding: 8 8 8 30;"/>
+
+        <StackPane>
+            <Label fx:id="notification1" style="-fx-text-fill: green; -fx-font-size: 14px;"/>
+            <Label fx:id="notification2" style="-fx-text-fill: red; -fx-font-size: 14px;"/>
+        </StackPane>
+
+        <HBox alignment="CENTER" spacing="20">
+            <Button text="Reset" styleClass="button-login-register" onAction="#handleReset"/>
+            <Button fx:id="cancelButton" text="Cancel" styleClass="button-cancel"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

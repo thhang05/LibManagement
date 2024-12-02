@@ -1,8 +1,8 @@
 package Handler;
 
-import Controller.LoginController;
+import Controller.Account.LoginController;
 import database.Database;
-import Entity.AccountStatus;
+import Status.AccountStatus;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.effect.GaussianBlur;
@@ -11,11 +11,11 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import menu.LibrarianMenu;
-import models.Librarian;
-import userInterface.SceneUtils;
+import Entities.Librarian;
+import UI.SceneUtils;
 import java.io.IOException;
 
-import models.Member;
+import Entities.Member;
 
 public class LoginHandler {
     private final Stage ownerStage;

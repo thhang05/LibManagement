@@ -1,4 +1,4 @@
-package models;
+package Entity;
 
 import database.Database;
 
@@ -15,12 +15,12 @@ public class Librarian extends Account {
         return database.addBook(bookItem);
     }
 
-    public boolean handleEditBook(String barcode, BookItem newBook) {
-        return database.updateBook(barcode, newBook);
+    public boolean handleEditBook(BookItem newBook) {
+        return database.updateBook(newBook);
     }
 
-    public void handleDeleteBook() {
-        System.out.println("Delete Book...");
+    public boolean handleDeleteBook(String barcode) {
+        return database.deleteBook(barcode);
     }
 
     public boolean verifyUserAccount(String username) {
@@ -31,24 +31,16 @@ public class Librarian extends Account {
         return database.lockUserAccount(username);
     }
 
-    public boolean handleSearch(String title, List<BookItem> bookList) {
-        return database.searchBook(title, bookList);
+    public boolean handleSearch(String keyword, String searchType, List<BookItem> bookList) {
+        return database.searchBooks(keyword, searchType, bookList);
     }
 
     public boolean handleSearch(String barcode, BookItem bookItem) {
         return database.searchBook(barcode, bookItem);
     }
 
-    public boolean handleSearchOnline(String title, List<BookItem> bookList) {
-        return database.searchBookOnline(title, bookList);
-    }
-
-    public void handleReports() {
-        System.out.println("Report...");
-    }
-
-    public void handleFines() {
-        System.out.println("Fine...");
+    public boolean handleSearchOnline(String keyword, String searchType, List<BookItem> bookList) {
+        return database.searchBookOnline(keyword, searchType, bookList);
     }
 
     public String getTotalMembers() {
@@ -65,15 +57,5 @@ public class Librarian extends Account {
 
     public String getOverdueBooks() {
         return database.getOverdueBooks();
-    }
-
-    @Override
-    public boolean updateInfo(Person newPerson) {
-        return database.updateInfo(username, newPerson);
-    }
-
-    @Override
-    public boolean resetPassword(String newPassword) {
-        return database.resetPassword(username, newPassword);
     }
 }

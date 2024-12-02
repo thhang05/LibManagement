@@ -3,13 +3,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('file:/D:/Library/LibraryManagementSystem/src/main/resources/image/librarian/mainLibraryBackground.png'); -fx-background-size: 100% 100%; -fx-background-repeat: no-repeat;" stylesheets="@/style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Account.MenuController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('file:/D:/Library/LibraryManagementSystem/src/main/resources/image/librarian/mainLibraryBackground.png');                    -fx-background-size: 100% 100%;                    -fx-background-repeat: no-repeat;" stylesheets="@/style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Account.MenuController">
 
-
-
-    <VBox spacing="30" AnchorPane.leftAnchor="90" AnchorPane.topAnchor="90" />
-    <Button fx:id="loginButton" layoutX="266.0" layoutY="159.0" styleClass="button-login-register-exit" text="Login" />
-    <Button fx:id="exitButton" layoutX="272.0" layoutY="279.0" styleClass="button-login-register-exit" text="Exit" />
-    <Button fx:id="registerButton" layoutX="258.0" layoutY="220.0" styleClass="button-login-register-exit" text="Register" />
+    <VBox alignment="CENTER" layoutY="255.0" spacing="20" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="255.0">
+        <Button fx:id="loginButton" maxWidth="200" styleClass="button-login-register-exit" text="Login" />
+        <Button fx:id="registerButton" maxWidth="200" styleClass="button-login-register-exit" text="Register" />
+        <Button fx:id="exitButton" maxWidth="200" styleClass="button-login-register-exit" text="Exit" />
+    </VBox>
 
 </AnchorPane>

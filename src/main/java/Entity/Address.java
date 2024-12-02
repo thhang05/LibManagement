@@ -1,7 +1,7 @@
-package models;
+package Entity;
 
 public class Address {
-    private String streetAddress;
+    private final String streetAddress;
     private String city;
     private String state;
     private String zipcode;
@@ -17,10 +17,6 @@ public class Address {
 
     public String getStreetAddress() {
         return streetAddress;
-    }
-
-    public void setStreetAddress(String streetAddress) {
-        this.streetAddress = streetAddress;
     }
 
     public String getCity() {

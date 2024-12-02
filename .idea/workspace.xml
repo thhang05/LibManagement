@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9068da4f-8886-430b-ac33-5a211a5fa3b9" name="Changes" comment="...">
+    <list default="true" id="9068da4f-8886-430b-ac33-5a211a5fa3b9" name="Changes" comment="update BookLending">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entity/BookLending.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entity/BookLending.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Address.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/BookItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Person.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +55,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/lennovo/Desktop/Iteliji/HelloWorld",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "last_opened_file_path": "C:/Users/lennovo/Desktop/Iteliji/Library",
+    "settings.editor.selected.configurable": "project.validation"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -72,6 +78,29 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="..." />

@@ -1,7 +1,7 @@
-package models;
+package Entity;
 
 import database.Database;
-import enums.AccountStatus;
+import Status.AccountStatus;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -12,6 +12,13 @@ public abstract class Account {
     protected String password;
     protected AccountStatus status;
     protected Person person;
+
+    public Account() {
+        this.username = null;
+        this.password = null;
+        this.status = null;
+        this.person = null;
+    }
 
     public Account(String username, String password) {
         this.username = username;
@@ -53,6 +60,11 @@ public abstract class Account {
         this.status = status;
     }
 
-    public abstract boolean updateInfo(Person newPerson);
-    public abstract boolean resetPassword(String newPassword);
+    public boolean updateInfo(Person newPerson) {
+        return Database.getInstance().updateInfo(username, newPerson);
+    }
+
+    public boolean resetPassword(String newPassword) {
+        return Database.getInstance().resetPassword(username, newPassword);
+    }
 }

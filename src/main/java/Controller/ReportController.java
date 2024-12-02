@@ -7,7 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.scene.control.*;
-import models.BookLending;
+import Entity.BookLending;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

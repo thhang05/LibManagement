@@ -1,4 +1,4 @@
-package models;
+package Entity;
 
 public class Person {
     private String name;

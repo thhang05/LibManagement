@@ -1,10 +1,10 @@
-package models;
+package Entity;
 
-import enums.BookFormat;
-import enums.BookStatus;
+import Status.BookFormat;
+import Status.BookStatus;
 import javafx.beans.property.*;
-
 import java.time.LocalDate;
+
 public class BookItem extends Book {
     private String barcode;
     private LocalDate borrowedDate;
@@ -46,10 +46,6 @@ public class BookItem extends Book {
         this.barcode = barcode;
     }
 
-    public StringProperty barcodeProperty() {
-        return new SimpleStringProperty(barcode);
-    }
-
     public LocalDate getBorrowedDate() {
         return borrowedDate;
     }
@@ -58,20 +54,12 @@ public class BookItem extends Book {
         this.borrowedDate = borrowedDate;
     }
 
-    public ObjectProperty<LocalDate> borrowedDateProperty() {
-        return new SimpleObjectProperty<>(borrowedDate);
-    }
-
     public LocalDate getDueDate() {
         return dueDate;
     }
 
     public void setDueDate(LocalDate dueDate) {
         this.dueDate = dueDate;
-    }
-
-    public ObjectProperty<LocalDate> dueDateProperty() {
-        return new SimpleObjectProperty<>(dueDate);
     }
 
     public double getPrice() {
@@ -94,20 +82,12 @@ public class BookItem extends Book {
         this.format = format;
     }
 
-    public ObjectProperty<BookFormat> formatProperty() {
-        return new SimpleObjectProperty<>(format);
-    }
-
     public BookStatus getStatus() {
         return status;
     }
 
     public void setStatus(BookStatus status) {
         this.status = status;
-    }
-
-    public ObjectProperty<BookStatus> statusProperty() {
-        return new SimpleObjectProperty<>(status);
     }
 
     public LocalDate getPublicationDate() {
@@ -118,28 +98,12 @@ public class BookItem extends Book {
         this.publicationDate = publicationDate;
     }
 
-    public ObjectProperty<LocalDate> publicationDateProperty() {
-        return new SimpleObjectProperty<>(publicationDate);
-    }
-
-    public void checkout() {
-        if (this.getStatus() == BookStatus.Loaned) {
-            System.out.println("The book has already been borrowed by someone else.");
-            return;
-        }
-
-        this.borrowedDate = LocalDate.now();
-        this.dueDate = borrowedDate.plusDays(DEFAULT_BORROW_DAYS);
-        this.setStatus(BookStatus.Loaned);
-        System.out.println("You have successfully borrowed the book. The return date is: " + dueDate);
-    }
-
     public String detail() {
         return "Title: " + title + "\n" +
                 "ISBN: " + ISBN + "\n" +
                 "Barcode: " + barcode + "\n" +
-                "Author: " + author + "\n" +
-                "Subject: " + categories + "\n" +
+                "Author: " + authorName + "\n" +
+                "Subject: " + subject + "\n" +
                 "Publisher: " + publisher + "\n" +
                 "Language: " + language + "\n" +
                 "Price: $" + price + "\n" +

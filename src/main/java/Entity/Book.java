@@ -1,15 +1,17 @@
-package models;
+package Entity;
 
-import javafx.beans.property.*;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
-public abstract class Book {
+public class Book {
     protected String ISBN;
     protected String title;
-    protected String categories;
+    protected String subject;
     protected String publisher;
     protected String language;
     protected int numberOfPages;
-    protected String author;
+    protected String authorName;
+    protected String imageUrl;
 
     public Book() {
         this.ISBN = null;
@@ -17,17 +19,30 @@ public abstract class Book {
         this.publisher = null;
         this.language = null;
         this.numberOfPages = 0;
-        this.author = null;
+        this.authorName = null;
     }
 
-    public Book(String ISBN, String title, String categories, String publisher, String language, int numberOfPages, String authorName) {
+    public Book(String ISBN, String title, String subject, String publisher, String language,
+                int numberOfPages, String authorName) {
         this.ISBN = ISBN;
         this.title = title;
-        this.categories = categories;
+        this.subject = subject;
         this.publisher = publisher;
         this.language = language;
         this.numberOfPages = numberOfPages;
-        this.author = authorName;
+        this.authorName = authorName;
+    }
+
+    public Book(String ISBN, String title, String subject, String publisher, String language,
+                int numberOfPages, String authorName, String imageUrl) {
+        this.ISBN = ISBN;
+        this.title = title;
+        this.subject = subject;
+        this.publisher = publisher;
+        this.language = language;
+        this.numberOfPages = numberOfPages;
+        this.authorName = authorName;
+        this.imageUrl = imageUrl;
     }
 
     public String getISBN() {
@@ -36,10 +51,6 @@ public abstract class Book {
 
     public void setISBN(String ISBN) {
         this.ISBN = ISBN;
-    }
-
-    public StringProperty isbnProperty() {
-        return new SimpleStringProperty(ISBN);
     }
 
     public String getTitle() {
@@ -54,16 +65,16 @@ public abstract class Book {
         return new SimpleStringProperty(title);
     }
 
-    public String getCategories() {
-        return categories;
+    public String getSubject() {
+        return subject;
     }
 
-    public void setCategories(String categories) {
-        this.categories = categories;
+    public void setSubject(String subject) {
+        this.subject = subject;
     }
 
-    public StringProperty categoriesProperty() {
-        return new SimpleStringProperty(categories);
+    public StringProperty subjectProperty() {
+        return new SimpleStringProperty(subject);
     }
 
     public String getPublisher() {
@@ -98,19 +109,29 @@ public abstract class Book {
         this.numberOfPages = numberOfPages;
     }
 
-    public IntegerProperty numberOfPagesProperty() {
-        return new SimpleIntegerProperty(numberOfPages);
-    }
-
     public String getAuthorName() {
-        return author;
+        return authorName;
     }
 
     public void setAuthorName(String authorName) {
-        this.author = authorName;
+        this.authorName = authorName;
     }
 
     public StringProperty authorNameProperty() {
-        return new SimpleStringProperty(author);
+        return new SimpleStringProperty(authorName);
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getInfo() {
+        return "Title: " + title + "\n"
+                + "Author: " + authorName + "\n"
+                + "ISBN: " + ISBN;
     }
 }
